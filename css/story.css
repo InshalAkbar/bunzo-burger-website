@@ -1,0 +1,188 @@
+/* =========================================
+   OUR STORY PAGE STYLES (Griddle Layout Dark)
+   ========================================= */
+
+/* --- STORY HERO --- */
+.story-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 70px; /* Navbar offset */
+}
+
+.story-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 30%;
+    z-index: 1;
+}
+
+.story-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.6); /* Dark overlay for text visibility */
+    z-index: 2;
+}
+
+.story-hero-title {
+    position: relative;
+    z-index: 3;
+    font-family: var(--font-massive);
+    font-size: 90px;
+    color: var(--text-white);
+    letter-spacing: 2px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* --- STORY INTRO --- */
+.story-intro {
+    padding: 120px 0;
+    background: var(--bg-black);
+    text-align: center;
+    position: relative;
+}
+
+.story-intro .container {
+    max-width: 900px;
+    position: relative;
+}
+
+/* Floating Stickers */
+.sticker {
+    position: absolute;
+    font-family: 'Permanent Marker', cursive;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transform: rotate(-10deg);
+    z-index: 5;
+}
+
+.st-1 { background: #f4c542; top: -30px; left: 10%; transform: rotate(-15deg); }
+.st-2 { background: #d32f2f; color: #fff; top: 10px; left: -5%; transform: rotate(10deg); }
+.st-3 { background: #f4c542; bottom: -20px; right: 15%; transform: rotate(5deg); }
+.st-4 { background: #222; color: #fff; top: -20px; right: 5%; transform: rotate(-8deg); border: 1px solid #555;}
+
+.intro-quote {
+    font-family: var(--font-body);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.intro-subtext {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--text-grey);
+    letter-spacing: 1px;
+}
+
+/* --- STORY CONTENT BLOCKS --- */
+.story-blocks {
+    padding: 50px 0 120px;
+    background: var(--bg-black);
+}
+
+.story-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.2fr; /* 3 Columns */
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 120px;
+}
+
+.story-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Left Column */
+.col-left {
+    position: sticky; /* Title sticks while scrolling */
+    top: 120px;
+}
+
+.block-title {
+    font-family: var(--font-massive);
+    font-size: 45px;
+    color: var(--text-white);
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+/* Middle Column */
+.col-mid {
+    padding-top: 5px;
+}
+
+.col-mid p {
+    color: var(--text-grey);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.col-mid p:last-child {
+    margin-bottom: 0;
+}
+
+/* Right Column (Image) */
+.col-right img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.col-right img:hover {
+    transform: scale(1.02);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .story-row {
+        grid-template-columns: 1fr; /* Stack everything */
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+    
+    .col-left {
+        position: relative;
+        top: 0;
+        text-align: center;
+    }
+
+    .col-mid {
+        text-align: center;
+    }
+    
+    .col-right {
+        text-align: center;
+    }
+
+    .col-right img {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+    
+    .sticker { display: none; } /* Hide stickers on mobile */
+}
+
+@media (max-width: 768px) {
+    .story-hero-title { font-size: 60px; }
+    .block-title { font-size: 36px; }
+    .intro-quote { font-size: 20px; }
+}

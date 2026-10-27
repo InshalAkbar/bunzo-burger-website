@@ -1,0 +1,253 @@
+/* =========================================
+   PRODUCT DETAIL PAGE STYLES (Split Layout)
+   ========================================= */
+
+.product-section {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: var(--bg-black);
+    min-height: 100vh;
+}
+
+.breadcrumbs {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-grey);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.breadcrumbs a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.product-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start; /* CHANGED: Dono ko upar se start karne ke liye */
+}
+
+/* Left Side: Image */
+.product-image-area {
+    position: relative;
+    width: 100%;
+    /* Height fix hata di hai taaki text ke saath align ho */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 20px; /* Thoda gap dene ke liye */
+}
+
+.image-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(242, 140, 56, 0.15);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product-image-area img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px; /* Height restrict ki hai */
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.8));
+    transition: transform 0.5s ease;
+}
+
+.product-image-area img:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+/* Right Side: Details */
+.product-info-area {
+    text-align: left;
+}
+
+.product-title {
+    font-family: var(--font-massive);
+    font-size: 70px;
+    color: var(--text-white);
+    line-height: 1;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.product-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.product-meta .price {
+    color: var(--ember-orange);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.product-meta .divider {
+    color: #444;
+}
+
+.product-meta .meta-text {
+    color: var(--text-grey);
+}
+
+.product-description {
+    color: var(--text-grey);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-width: 90%;
+}
+
+.product-allergens {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.btn-order {
+    background: var(--ember-orange);
+    color: var(--bg-black);
+    border: 2px solid var(--ember-orange);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.btn-order:hover {
+    background: transparent;
+    color: var(--ember-orange);
+}
+
+/* Nutrition Table */
+.nutrition-section {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+}
+
+.nutrition-section h3 {
+    font-family: var(--font-massive);
+    font-size: 24px;
+    color: var(--text-white);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.nutrition-sub {
+    font-size: 12px;
+    color: var(--text-grey);
+    margin-bottom: 20px;
+}
+
+.nutrition-table {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: collapse;
+}
+
+.nutrition-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+.nutrition-table td:last-child {
+    text-align: right;
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+.disclaimer {
+    font-size: 10px;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* --- RELATED PRODUCTS --- */
+.related-products {
+    padding: 60px 0 100px;
+    background: #0f0f0f;
+    border-top: 1px solid #222;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.related-card {
+    background: var(--bg-black);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+}
+
+.related-card:hover {
+    border-color: var(--ember-orange);
+    transform: translateY(-5px);
+}
+
+.related-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+}
+
+.related-card h3 {
+    color: var(--text-white);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.related-card p {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .product-split-layout { grid-template-columns: 1fr; gap: 20px; }
+    .product-image-area { height: auto; min-height: 300px; }
+    .product-info-area { text-align: center; }
+    .product-meta { justify-content: center; }
+    .product-description { margin: 0 auto 15px auto; }
+    .nutrition-table { margin: 0 auto; text-align: left; }
+    .related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .product-section { padding-top: 90px; }
+    .product-title { font-size: 50px; }
+    .product-image-area img { max-height: 300px; }
+    .related-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Bunzo Burgers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo"><span class="dot"></span>BUNZO</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="story.html">Our Story</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-contact">
+                <a href="https://wa.me/923001234567" target="_blank" class="nav-phone">+92 300 1234567</a>
+                
+                <div id="auth-buttons" style="display: flex; gap: 10px;">
+                    <a href="login.html" class="order-btn" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 10px 20px;">Login</a>
+                    <a href="register.html" class="order-btn" style="padding: 10px 20px;">Register</a>
+                </div>
+                
+                <div id="user-info" style="display: none; align-items: center; gap: 15px;">
+                    <span style="color: white; font-weight: 600;" id="user-name-display"></span>
+                    <a href="#" class="order-btn" id="nav-logout-btn" style="background: transparent; border: 1px solid white; color: white; padding: 10px 20px;">Logout</a>
+                </div>
+                
+                <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU HERO -->
+    <section class="menu-hero">
+        <div class="menu-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="menu-hero-overlay"></div>
+        <div class="container menu-hero-content">
+            <span class="small-title text-orange">— OUR MENU</span>
+            <h1 class="menu-hero-title">SMASHED.<br>STACKED.<br>SERVED.</h1>
+        </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar-wrapper" id="filter-bar">
+        <div class="container filter-bar">
+            <button class="filter-btn active" data-target="burgers">BURGERS</button>
+            <button class="filter-btn" data-target="chicken">CHICKEN</button>
+            <button class="filter-btn" data-target="sides">FRIES & SIDES</button>
+            <button class="filter-btn" data-target="icecream">ICE CREAM</button>
+            <button class="filter-btn" data-target="shakes">SHAKES</button>
+            <button class="filter-btn" data-target="drinks">DRINKS</button>
+        </div>
+    </div>
+
+    <!-- MENU CONTENT -->
+    <div class="menu-main-content" id="menu-section">
+        <div class="container">
+
+            <!-- BURGERS -->
+            <section class="menu-category" id="burgers">
+                <h2 class="category-title">BURGERS</h2>
+                <div class="menu-page-grid">
+                    <a href="product.html?id=double" class="menu-item-card">
+                        <div class="card-badge">#1</div>
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="The Double"></div>
+                        <div class="item-info"><h3>The Double</h3><p class="item-price">$14.00</p></div>
+                    </a>
+                    <a href="product.html?id=classic" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="The Classic"></div>
+                        <div class="item-info"><h3>The Classic</h3><p class="item-price">$12.00</p></div>
+                    </a>
+                    <a href="product.html?id=spicy" class="menu-item-card">
+                        <div class="card-badge hot">HOT</div>
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Spicy Ember"></div>
+                        <div class="item-info"><h3>Spicy Ember</h3><p class="item-price">$15.00</p></div>
+                    </a>
+                    <a href="product.html?id=veggie" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Veggie Stack"></div>
+                        <div class="item-info"><h3>Veggie Stack</h3><p class="item-price">$11.00</p></div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- CHICKEN -->
+            <section class="menu-category" id="chicken">
+                <h2 class="category-title">CHICKEN</h2>
+                <div class="menu-page-grid">
+                    <a href="product.html?id=hot-chicken" class="menu-item-card">
+                        <div class="card-badge new">NEW</div>
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1615719413546-198b25453f85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hot Chicken"></div>
+                        <div class="item-info"><h3>Hot Chicken</h3><p class="item-price">$13.00</p></div>
+                    </a>
+                    <a href="product.html?id=crispy-chicken" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crispy Chicken"></div>
+                        <div class="item-info"><h3>Crispy Chicken</h3><p class="item-price">$12.50</p></div>
+                    </a>
+                    <a href="product.html?id=strips" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chicken Strips"></div>
+                        <div class="item-info"><h3>Chicken Strips</h3><p class="item-price">$8.00</p></div>
+                    </a>
+                    <a href="product.html?id=chicken-melt" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chicken Melt"></div>
+                        <div class="item-info"><h3>Chicken Melt</h3><p class="item-price">$11.50</p></div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- FRIES & SIDES -->
+            <section class="menu-category" id="sides">
+                <h2 class="category-title">FRIES & SIDES</h2>
+                <div class="menu-page-grid">
+                    <a href="product.html?id=loaded-fries" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Loaded Fries"></div>
+                        <div class="item-info"><h3>Loaded Ember Fries</h3><p class="item-price">$7.50</p></div>
+                    </a>
+                    <a href="product.html?id=onion-rings" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1639024471283-03518883512d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Onion Rings"></div>
+                        <div class="item-info"><h3>Crispy Onion Rings</h3><p class="item-price">$6.00</p></div>
+                    </a>
+                    <a href="product.html?id=classic-fries" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Classic Fries"></div>
+                        <div class="item-info"><h3>Classic Fries</h3><p class="item-price">$4.50</p></div>
+                    </a>
+                    <a href="product.html?id=chicken-bites" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chicken Bites"></div>
+                        <div class="item-info"><h3>Chicken Bites</h3><p class="item-price">$7.00</p></div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ICE CREAM -->
+            <section class="menu-category" id="icecream">
+                <h2 class="category-title">ICE CREAM</h2>
+                <div class="menu-page-grid">
+                    <a href="product.html?id=strawberry-sundae" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Strawberry Sundae"></div>
+                        <div class="item-info"><h3>Strawberry Sundae</h3><p class="item-price">$5.00</p></div>
+                    </a>
+                    <a href="product.html?id=chocolate-crunch" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chocolate Crunch"></div>
+                        <div class="item-info"><h3>Chocolate Crunch</h3><p class="item-price">$5.50</p></div>
+                    </a>
+                    <a href="product.html?id=vanilla-cone" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vanilla Cone"></div>
+                        <div class="item-info"><h3>Vanilla Cone</h3><p class="item-price">$3.50</p></div>
+                    </a>
+                    <a href="product.html?id=caramel-sundae" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1559703248-dcaaec9fab78?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Caramel Sundae"></div>
+                        <div class="item-info"><h3>Caramel Sundae</h3><p class="item-price">$5.00</p></div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SHAKES -->
+            <section class="menu-category" id="shakes">
+                <h2 class="category-title">SHAKES</h2>
+                <div class="menu-page-grid">
+                    <a href="product.html?id=vanilla-shake" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vanilla Shake"></div>
+                        <div class="item-info"><h3>Vanilla Shake</h3><p class="item-price">$6.00</p></div>
+                    </a>
+                    <a href="product.html?id=chocolate-shake" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chocolate Shake"></div>
+                        <div class="item-info"><h3>Chocolate Shake</h3><p class="item-price">$6.50</p></div>
+                    </a>
+                    <a href="product.html?id=strawberry-shake" class="menu-item-card">
+                        <!-- FIXED IMAGE LINK FOR STRAWBERRY SHAKE -->
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Strawberry Shake"></div>
+                        <div class="item-info"><h3>Strawberry Shake</h3><p class="item-price">$6.50</p></div>
+                    </a>
+                    <a href="product.html?id=peanut-shake" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1553787499-6f9133860278?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Peanut Butter Shake"></div>
+                        <div class="item-info"><h3>Peanut Butter Shake</h3><p class="item-price">$7.00</p></div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- DRINKS -->
+            <section class="menu-category" id="drinks">
+                <h2 class="category-title">DRINKS</h2>
+                <div class="menu-page-grid">
+                    <a href="product.html?id=lemonade" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lemonade"></div>
+                        <div class="item-info"><h3>Classic Lemonade</h3><p class="item-price">$3.50</p></div>
+                    </a>
+                    <a href="product.html?id=cola" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cola"></div>
+                        <div class="item-info"><h3>Cola Zero</h3><p class="item-price">$3.00</p></div>
+                    </a>
+                    <a href="product.html?id=mango-drink" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1546173159-315724a31696?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mango Drink"></div>
+                        <div class="item-info"><h3>Mango Yuzu</h3><p class="item-price">$4.00</p></div>
+                    </a>
+                    <a href="product.html?id=water" class="menu-item-card">
+                        <div class="item-img"><img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sparkling Water"></div>
+                        <div class="item-info"><h3>Sparkling Water</h3><p class="item-price">$2.50</p></div>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fa-solid fa-location-dot" style="color: var(--ember-orange); margin-right: 8px;"></i> 123 FLAVOR STREET<br>BURGER CITY, BK 11211</h4>
+                    <p>hello@bunzo.com</p>
+                    <p><a href="https://wa.me/923001234567" target="_blank" style="color: var(--text-grey); text-decoration: none;">+92 300 1234567</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="../index.html">HOME</a>
+                    <a href="menu.html">MENU</a>
+                    <a href="story.html">OUR STORY</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="footer-col">
+                    <h4>SOCIAL</h4>
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">TIKTOK</a>
+                    <a href="#">YOUTUBE</a>
+                    <a href="#">FACEBOOK</a>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h4>JOIN THE BUNZO CREW</h4>
+                    <p>Get exclusive drops, events and more.</p>
+                    <!-- Ensure this form is working -->
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your mail" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-giant-text">BUNZO</div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bunzo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Bunzo Burgers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <!-- NAVBAR (Updated with separate buttons) -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo"><span class="dot"></span>BUNZO</a>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="story.html">Our Story</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-contact">
+                <a href="https://wa.me/923001234567" target="_blank" class="nav-phone">+92 300 1234567</a>
+                <div style="display: flex; gap: 10px;">
+                    <a href="login.html" class="order-btn" style="background: transparent; border: 1px solid #fff; color: #fff;">Login</a>
+                    <a href="register.html" class="order-btn">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- AUTH SECTION -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-form-wrapper">
+                <h2 class="auth-title">WELCOME BACK</h2>
+                <p class="auth-subtitle">Login to your Bunzo account to order faster.</p>
+                
+                <form id="login-form" autocomplete="on">
+                    <div class="input-group">
+                        <label for="login-email">Email Address</label>
+                        <!-- Added name and autocomplete -->
+                        <input type="email" id="login-email" name="email" autocomplete="email" placeholder="hello@bunzo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <!-- Added name and autocomplete -->
+                        <input type="password" id="login-password" name="password" autocomplete="current-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-auth">Login <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+
+                <p class="auth-switch">Don't have an account? <a href="register.html">Register Now</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

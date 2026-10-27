@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Bunzo Burgers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo"><span class="dot"></span>BUNZO</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="story.html">Our Story</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-contact">
+                <a href="https://wa.me/923001234567" target="_blank" class="nav-phone">+92 300 1234567</a>
+                
+                <div id="auth-buttons" style="display: flex; gap: 10px;">
+                    <a href="login.html" class="order-btn" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 10px 20px;">Login</a>
+                    <a href="register.html" class="order-btn" style="padding: 10px 20px;">Register</a>
+                </div>
+                
+                <div id="user-info" style="display: none; align-items: center; gap: 15px;">
+                    <span style="color: white; font-weight: 600;" id="user-name-display"></span>
+                    <a href="#" class="order-btn" id="nav-logout-btn" style="background: transparent; border: 1px solid white; color: white; padding: 10px 20px;">Logout</a>
+                </div>
+                
+                <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRODUCT SECTION -->
+    <section class="product-section">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="menu.html">MENU</a> <span>/</span> <span id="breadcrumb-name">PRODUCT</span>
+            </div>
+
+            <div class="product-split-layout">
+                <!-- Left Side: Image -->
+                <div class="product-image-area">
+                    <div class="image-glow"></div>
+                    <img id="product-image" src="" alt="Product Image">
+                </div>
+
+                <!-- Right Side: Details -->
+                <div class="product-info-area">
+                    <h1 id="product-name" class="product-title">Loading...</h1>
+                    
+                    <div class="product-meta">
+                        <span id="product-price" class="price">$0.00</span>
+                        <span class="divider">|</span>
+                        <span id="product-weight" class="meta-text">0 g</span>
+                        <span class="divider">|</span>
+                        <span id="product-kcal" class="meta-text">0 kcal</span>
+                    </div>
+
+                    <p id="product-desc" class="product-description">
+                        Loading description...
+                    </p>
+
+                    <p id="product-allergens" class="product-allergens">
+                        Loading allergens...
+                    </p>
+
+                    <!-- BUTTON UPDATED TO ORDER NOW -->
+                    <button id="order-now-btn" class="btn-order trigger-order">
+                        Order Now <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <!-- Nutrition Table -->
+                    <div class="nutrition-section">
+                        <h3>NUTRITION</h3>
+                        <p class="nutrition-sub">Per serving</p>
+                        <table class="nutrition-table">
+                            <tbody>
+                                <tr><td>Weight</td><td id="product-weight-table">0 g</td></tr>
+                                <tr><td>Energy</td><td id="product-kcal-table">0 kcal</td></tr>
+                                <tr><td>Protein</td><td>31 g</td></tr>
+                                <tr><td>Carbohydrates</td><td>38 g</td></tr>
+                                <tr><td>of which sugars</td><td>8 g</td></tr>
+                                <tr><td>Fat</td><td>34 g</td></tr>
+                                <tr><td>of which saturated</td><td>16 g</td></tr>
+                                <tr><td>Salt</td><td>2.5 g</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="disclaimer">*Nutritional values are estimates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YOU MAY ALSO LIKE -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">YOU MAY ALSO LIKE</h2>
+            <div class="related-grid">
+                <a href="product.html?id=classic" class="related-card">
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="The Classic">
+                    <h3>The Classic</h3>
+                    <p>$12.00</p>
+                </a>
+                <a href="product.html?id=spicy" class="related-card">
+                    <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Spicy Ember">
+                    <h3>Spicy Ember</h3>
+                    <p>$15.00</p>
+                </a>
+                <a href="product.html?id=veggie" class="related-card">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Veggie Stack">
+                    <h3>Veggie Stack</h3>
+                    <p>$11.00</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fa-solid fa-location-dot" style="color: var(--ember-orange); margin-right: 8px;"></i> 123 FLAVOR STREET<br>BURGER CITY, BK 11211</h4>
+                    <p>hello@bunzo.com</p>
+                    <p><a href="https://wa.me/923001234567" target="_blank" style="color: var(--text-grey); text-decoration: none;">+92 300 1234567</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="../index.html">HOME</a>
+                    <a href="menu.html">MENU</a>
+                    <a href="story.html">OUR STORY</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="footer-col">
+                    <h4>SOCIAL</h4>
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">TIKTOK</a>
+                    <a href="#">YOUTUBE</a>
+                    <a href="#">FACEBOOK</a>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h4>JOIN THE BUNZO CREW</h4>
+                    <p>Get exclusive drops, events and more.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your mail" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-giant-text">BUNZO</div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bunzo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/product.js"></script>
+</body>
+</html>

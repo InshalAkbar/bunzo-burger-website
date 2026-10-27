@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bunzo Burgers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo"><span class="dot"></span>BUNZO</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="story.html">Our Story</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="nav-contact">
+                <a href="https://wa.me/923001234567" target="_blank" class="nav-phone">+92 300 1234567</a>
+                
+                <div id="auth-buttons" style="display: flex; gap: 10px;">
+                    <a href="login.html" class="order-btn" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 10px 20px;">Login</a>
+                    <a href="register.html" class="order-btn" style="padding: 10px 20px;">Register</a>
+                </div>
+                
+                <div id="user-info" style="display: none; align-items: center; gap: 15px;">
+                    <span style="color: white; font-weight: 600;" id="user-name-display"></span>
+                    <a href="#" class="order-btn" id="nav-logout-btn" style="background: transparent; border: 1px solid white; color: white; padding: 10px 20px;">Logout</a>
+                </div>
+                
+                <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT HERO SECTION -->
+    <section class="contact-hero">
+        <div class="container text-center">
+            <span class="small-title text-orange">— CONTACT</span>
+            <h1 class="contact-title">COME HUNGRY.<br>LEAVE HAPPY.</h1>
+            <p class="contact-subtitle">Walk in, call ahead or drop us a line. Big group or private party? Tell us and we will save you the long table.</p>
+        </div>
+    </section>
+
+    <!-- INFO CARDS SECTION -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Card 1 -->
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-location-dot"></i> VISIT US</h3>
+                    <p>123 Flavor Street</p>
+                    <p>Burger City, BK 11211</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="info-card">
+                    <h3><i class="fa-regular fa-clock"></i> OPENING HOURS</h3>
+                    <p>Mon – Thu · 11:00 – 22:00</p>
+                    <p>Fri – Sat · 11:00 – 00:00</p>
+                    <p>Sunday · 12:00 – 21:00</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-phone"></i> SAY HELLO</h3>
+                    <p><a href="https://wa.me/923001234567" target="_blank">+92 300 1234567</a></p>
+                    <p><a href="mailto:hello@bunzo.com">hello@bunzo.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LARGE IMAGE SECTION -->
+    <section class="contact-image-section">
+        <div class="container">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="People enjoying Bunzo Burgers">
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTY CTA BANNER -->
+    <section class="party-banner-section">
+        <div class="container">
+            <div class="party-banner">
+                <div class="banner-content">
+                    <span class="banner-small-title">PRIVATE EVENTS</span>
+                    <h2>PLANNING A PARTY?</h2>
+                    <p>Birthdays, team lunches or a full buyout — book the long table and we'll keep the griddle hot.</p>
+                </div>
+                <div class="banner-action">
+                    <a href="https://wa.me/923001234567" target="_blank" class="btn-book">BOOK THE LONG TABLE &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fa-solid fa-location-dot" style="color: var(--ember-orange); margin-right: 8px;"></i> 123 FLAVOR STREET<br>BURGER CITY, BK 11211</h4>
+                    <p>hello@bunzo.com</p>
+                    <p><a href="https://wa.me/923001234567" target="_blank" style="color: var(--text-grey); text-decoration: none;">+92 300 1234567</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="../index.html">HOME</a>
+                    <a href="menu.html">MENU</a>
+                    <a href="story.html">OUR STORY</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="footer-col">
+                    <h4>SOCIAL</h4>
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">TIKTOK</a>
+                    <a href="#">YOUTUBE</a>
+                    <a href="#">FACEBOOK</a>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h4>JOIN THE BUNZO CREW</h4>
+                    <p>Get exclusive drops, events and more.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your mail" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-giant-text">BUNZO</div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bunzo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

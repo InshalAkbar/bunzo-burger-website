@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunzo | Smash Burgers & More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 01. NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="dot"></span>BUNZO</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/menu.html">Menu</a>
+                <a href="pages/story.html">Our Story</a>
+                <a href="pages/contact.html">Contact</a>
+            </nav>
+            <div class="nav-contact">
+                <a href="https://wa.me/923001234567" target="_blank" class="nav-phone">+92 300 1234567</a>
+                
+                <!-- Separate Login & Register Buttons -->
+                <div id="auth-buttons" style="display: flex; gap: 10px;">
+                    <a href="pages/login.html" class="order-btn" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 10px 20px;">Login</a>
+                    <a href="pages/register.html" class="order-btn" style="padding: 10px 20px;">Register</a>
+                </div>
+                
+                <!-- Logout Button -->
+                <div id="user-info" style="display: none; align-items: center; gap: 15px;">
+                    <span style="color: white; font-weight: 600;" id="user-name-display"></span>
+                    <a href="#" class="order-btn" id="nav-logout-btn" style="background: transparent; border: 1px solid white; color: white; padding: 10px 20px;">Logout</a>
+                </div>
+                
+                <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 02. HERO SECTION -->
+    <section class="hero" id="hero">
+        <h1 class="giant-text">BUNZO</h1>
+        <canvas id="smoke-canvas"></canvas>
+        <div class="burger-bg">
+            <img src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" alt="Bunzo Burger Background">
+        </div>
+        <canvas id="sparks-canvas"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-top-bar">
+            <div class="live-info-box">
+                <div class="led-display">
+                    <span id="live-day-date">TODAY - TUE 20 OCT</span><br>
+                    <span id="live-location">NORTHGATE CAMPUS - LIBRARY</span>
+                </div>
+                <div class="info-subtext"><span class="orange-dot"></span> WHERE THE TRUCK IS TODAY, UPDATED LIVE</div>
+            </div>
+            <div class="status-box">
+                <div class="status-dot" id="status-dot"></div>
+                <span id="live-status">Closed for today</span>
+                <div class="status-sub">TOMORROW: PIER 9 MARKET LOT</div>
+                <a href="#menu" class="directions-link">VIEW SCHEDULE &nearr;</a>
+            </div>
+        </div>
+
+        <div class="hero-bottom-left">
+            <h2>Smash burgers,<br>parked somewhere<br>new every day.</h2>
+            <p>Find today's spot below, order ahead from your phone and skip the queue. Or book the truck for your party.</p>
+            <div class="bottom-actions">
+                <a href="pages/menu.html" class="btn-orange trigger-order">Order ahead &rarr;</a>
+                <a href="pages/contact.html" class="btn-dark">Book the truck</a>
+            </div>
+            <div class="bottom-meta">
+                <span>PICK UP IN ~12 MIN</span>
+                <span>CATERING FROM 40 GUESTS</span>
+            </div>
+        </div>
+
+        <div class="hero-bottom-right">
+            <div class="burger-meta">
+                <span>NO. 01</span>
+                <span>$14</span>
+            </div>
+            <h3>The Double</h3>
+            <p>Two 90 g patties, smashed thin, American cheese, pickles, Ember sauce.</p>
+        </div>
+
+        <div class="week-schedule" id="schedule">
+            <!-- JS will populate this -->
+        </div>
+    </section>
+
+    <!-- 03. BRAND MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-content">
+            <span>FRESH DAILY</span> <span class="star">✦</span>
+            <span>BIG FLAVOR</span> <span class="star">✦</span>
+            <span>ZERO BORING</span> <span class="star">✦</span>
+            <span>BUNZO BURGERS</span> <span class="star">✦</span>
+            <span>FRESH DAILY</span> <span class="star">✦</span>
+            <span>BIG FLAVOR</span> <span class="star">✦</span>
+            <span>ZERO BORING</span> <span class="star">✦</span>
+            <span>BUNZO BURGERS</span> <span class="star">✦</span>
+        </div>
+    </div>
+
+    <!-- MADE TO BE SHARED SECTION -->
+    <section class="shared-section reveal" id="shared">
+        <div class="container">
+            <div class="shared-header">
+                <h2 class="section-title">MADE TO BE <span class="text-orange">SHARED</span></h2>
+            </div>
+
+            <div class="shared-grid">
+                <div class="polaroid-stack" id="polaroid-stack">
+                    <div class="polaroid p1">
+                        <div class="tape"></div>
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Friends eating burger">
+                        <p class="polaroid-caption">FRIDAY CREW</p>
+                    </div>
+                    <div class="polaroid p2">
+                        <div class="tape"></div>
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger close up">
+                    </div>
+                    <div class="polaroid p3">
+                        <div class="tape"></div>
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fries">
+                    </div>
+                    <div class="click-more">
+                        CLICK FOR MORE &olarr;
+                        <div class="dots"><span></span><span class="active"></span><span></span></div>
+                    </div>
+                </div>
+
+                <div class="receipt-wrapper">
+                    <div class="printer-slot"></div>
+                    <div class="receipt-container">
+                        <div class="receipt" id="print-receipt">
+                            <div class="receipt-header">
+                                <h3>BUNZO</h3>
+                                <p>123 FLAVOR ST · BURGER CITY</p>
+                            </div>
+                            <div class="receipt-meta">
+                                <span id="receipt-date">10/21/2026</span>
+                                <span id="receipt-time">02:45 PM</span>
+                            </div>
+                            <div class="receipt-meta">
+                                <span>ORDER #<span id="receipt-order-no">01</span> · SERVER: MIKE</span>
+                            </div>
+                            <div class="receipt-items" id="receipt-items-container"></div>
+                            <div class="receipt-total">
+                                <span>TOTAL:</span>
+                                <span class="total-val" id="receipt-total-val">$14</span>
+                            </div>
+                            <div class="barcode"></div>
+                            <p class="receipt-footer">THANK YOU · COME HUNGRY</p>
+                            <div class="paid-stamp">PAID</div>
+                        </div>
+                    </div>
+                    <div class="receipt-bottom-text">
+                        <p>At BUNZO, we believe great food brings people together. Insanely good burgers, premium ingredients, bold flavors and a whole lot of love.</p>
+                        <div class="receipt-actions">
+                            <a href="pages/menu.html" class="btn-outline">EXPLORE MENU &rarr;</a>
+                            <a href="#" class="print-text" id="print-again-btn">PRINT AGAIN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DECONSTRUCTED BURGER ANIMATION -->
+    <section class="deconstruct-section" id="deconstruct">
+        <div class="sticky-container">
+            <div class="deconstruct-text">
+                <span class="small-title">— NO. 02 · HOW IT'S BUILT</span>
+                <h2 class="section-title">The Double,<br>taken apart.</h2>
+            </div>
+            <div class="burger-parts" id="burger-parts">
+                <img src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" class="slice slice-1" alt="Top Bun">
+                <img src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" class="slice slice-2" alt="Sauce">
+                <img src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" class="slice slice-3" alt="Patty 1">
+                <img src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" class="slice slice-4" alt="Patty 2">
+                <img src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" class="slice slice-5" alt="Bottom Bun">
+
+                <div class="label label-1"><span class="num">01</span><h4>Potato bun</h4><p>Toasted face-down in beef fat</p></div>
+                <div class="label label-2"><span class="num">02</span><h4>American + Griddle sauce</h4><p>Melts over the top patty, sauce under the crown</p></div>
+                <div class="label label-3"><span class="num">03</span><h4>90 g chuck, smashed</h4><p>Pressed to 6 mm on a 230°C plate for lacy edges</p></div>
+                <div class="label label-4"><span class="num">04</span><h4>Second patty</h4><p>Same smash, a slice of American on top</p></div>
+                <div class="label label-5"><span class="num">05</span><h4>Toasted heel</h4><p>Catches every drip on the walk back</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. SIGNATURE BURGERS -->
+    <section class="menu-section reveal" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Signature <br><span class="text-orange">Burgers</span></h2>
+                <p>Our rotating selection of smash hits.</p>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="The Double">
+                        <div class="price-tag">$14</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>The Double</h3>
+                        <p>Two 90g patties, smashed thin, American cheese, pickles, Ember sauce.</p>
+                        <a href="pages/menu.html" class="add-to-cart" style="text-decoration: none;">View Menu <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="The Classic">
+                        <div class="price-tag">$12</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>The Classic</h3>
+                        <p>Single 120g patty, cheddar, lettuce, tomato, house mayo.</p>
+                        <a href="pages/menu.html" class="add-to-cart" style="text-decoration: none;">View Menu <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Spicy Ember">
+                        <div class="price-tag">$15</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Spicy Ember</h3>
+                        <p>Pepper jack, jalapeños, crispy onions, spicy chipotle sauce.</p>
+                        <a href="pages/menu.html" class="add-to-cart" style="text-decoration: none;">View Menu <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. BEYOND BURGERS -->
+    <section class="beyond-section reveal" id="beyond">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beyond <br><span class="text-orange">Burgers</span></h2>
+                <p>Because a burger needs a sidekick.</p>
+            </div>
+            <div class="beyond-grid">
+                <div class="beyond-card">
+                    <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Loaded Fries">
+                    <h3>Loaded Ember Fries</h3>
+                    <p>Topped with cheese sauce, bacon bits, and our signature spice dust.</p>
+                </div>
+                <div class="beyond-card">
+                    <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Onion Rings">
+                    <h3>Crispy Onion Rings</h3>
+                    <p>Thick-cut, beer-battered, and fried to golden perfection.</p>
+                </div>
+                <div class="beyond-card">
+                    <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Milkshake">
+                    <h3>Craft Shakes</h3>
+                    <p>Thick, creamy, and made with real ice cream. Try the salted caramel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. WHY BUNZO? -->
+    <section class="why-section reveal" id="why">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why <span class="text-orange">Bunzo?</span></h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="icon-box"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We source locally and daily. No frozen patties, ever.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon-box"><i class="fa-solid fa-fire"></i></div>
+                    <h3>Made To Order</h3>
+                    <p>Your burger hits the griddle only after you order.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Bold Flavor</h3>
+                    <p>Our secret Ember sauce and custom spice blends pack a punch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08. CUSTOMER REVIEWS -->
+    <section class="reviews-section reveal" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What They <span class="text-orange">Say</span></h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Honestly the best smash burger I've had in years. The crust on those patties is unreal."</p>
+                    <div class="review-user">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah J.">
+                        <h4>Sarah J.</h4>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"The Ember sauce is addictive. I track their schedule every week just to get my fix."</p>
+                    <div class="review-user">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mike T.">
+                        <h4>Mike T.</h4>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Booked the truck for an office party. Everyone went crazy for the Double. 10/10."</p>
+                    <div class="review-user">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Amanda R.">
+                        <h4>Amanda R.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fa-solid fa-location-dot" style="color: var(--ember-orange); margin-right: 8px;"></i> 123 FLAVOR STREET<br>BURGER CITY, BK 11211</h4>
+                    <p>hello@bunzo.com</p>
+                    <p><a href="https://wa.me/923001234567" target="_blank" style="color: var(--text-grey); text-decoration: none;">+92 300 1234567</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="index.html">HOME</a>
+                    <a href="pages/menu.html">MENU</a>
+                    <a href="pages/story.html">OUR STORY</a>
+                    <a href="pages/contact.html">CONTACT</a>
+                </div>
+                <div class="footer-col">
+                    <h4>SOCIAL</h4>
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">TIKTOK</a>
+                    <a href="#">YOUTUBE</a>
+                    <a href="#">FACEBOOK</a>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h4>JOIN THE BUNZO CREW</h4>
+                    <p>Get exclusive drops, events and more.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your mail" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-giant-text">BUNZO</div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bunzo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
